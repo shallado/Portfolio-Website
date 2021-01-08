@@ -11,7 +11,7 @@ function AppRouter() {
           <Nav />
           <Switch>
             <Route component={AboutPage} path="/" exact />
-            <Route component={WorkPage} />
+            <Route component={WorkPage} path="/work" />
           </Switch>
         </div>
       </div>
