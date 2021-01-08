@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import AboutPage from '../pages/AboutPage';
 import Nav from '../components/Nav';
+import WorkPage from '../pages/WorkPage';
 
 function AppRouter() {
   return (
@@ -10,6 +11,7 @@ function AppRouter() {
           <Nav />
           <Switch>
             <Route component={AboutPage} path="/" exact />
+            <Route component={WorkPage} />
           </Switch>
         </div>
       </div>
