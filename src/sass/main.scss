@@ -1,0 +1,13 @@
+@import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+@import './abstracts/variables';
+
+@import './base/base';
+
+@import './pages/about.scss';
+
+@import './components/headings';
+@import './components//main';
+@import './components/nav';
+@import './components/social-links';

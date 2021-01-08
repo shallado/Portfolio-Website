@@ -1,0 +1,15 @@
+.social-links {
+  margin-left: 5rem;
+
+  & a {
+    &:not(:first-child) {
+      margin-left: $s-spacing;
+    }
+  }
+
+  &__icon {
+    fill: $light-grey;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
