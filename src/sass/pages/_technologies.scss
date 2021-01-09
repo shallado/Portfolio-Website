@@ -1,3 +1,49 @@
 .technologies {
   @include pageLayout;
+  overflow-y: scroll;
+
+  &__main-container {
+    display: flex;
+  }
+
+  &__container-one,
+  &__container-two {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__container-two {
+    margin-left: 16rem;
+  }
+
+  &__icon-container {
+    margin-top: $l-spacing;
+
+    display: flex;
+    justify-content: space-between;
+
+    & div {
+      border-radius: 10rem;
+      height: 12rem;
+      margin-left: $l-spacing;
+      position: relative;
+      width: 12rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        border-radius: 10rem;
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $purple;
+        opacity: 0.3;
+      }
+    }
+  }
 }
