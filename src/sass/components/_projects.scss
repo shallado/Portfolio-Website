@@ -1,0 +1,28 @@
+.projects {
+  display: flex;
+  justify-content: space-between;
+
+  &__project-img-container {
+    height: 15rem;
+    background-color: $berry-pink;
+    width: 20rem;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__project-img {
+    box-shadow: 0.5rem 0.5rem 0.7rem $light-grey;
+    height: 11rem;
+    width: 18rem;
+
+    &:hover {
+      cursor: pointer;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
