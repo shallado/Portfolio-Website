@@ -1,4 +1,3 @@
-import React from 'react';
 import project from '../img/project.png';
 
 function WorkPage() {

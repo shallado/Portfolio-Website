@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import IconGitHub from '../svg/IconGitHub';
 import IconLinkedIn from '../svg/IconLinkedIn';
