@@ -34,7 +34,7 @@ function Nav() {
           </li>
           <li className="nav__link-container">
             <NavLink
-              to="/technology"
+              to="/technologies"
               className="nav__link"
               activeClassName="nav__link-active"
             >
