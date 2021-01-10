@@ -1,7 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import IconGitHub from '../svg/IconGitHub';
-import IconLinkedIn from '../svg/IconLinkedIn';
-import IconTwitter from '../svg/IconTwitter';
+import SocialLinks from './SocialLinks';
 import avatar from '../img/avatar.png';
 
 function Nav() {
@@ -52,29 +50,7 @@ function Nav() {
         </ul>
       </div>
       <div className="nav__container">
-        <div className="social-links">
-          <a
-            href="https://twitter.com/SHallado1012"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <IconTwitter />
-          </a>
-          <a
-            href="https://github.com/shallado"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <IconGitHub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/sandrohallado/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <IconLinkedIn />
-          </a>
-        </div>
+        <SocialLinks />
       </div>
     </nav>
   );
