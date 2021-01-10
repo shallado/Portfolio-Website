@@ -1,0 +1,19 @@
+.contact {
+  @include pageLayout;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__container {
+    .social-links {
+      &__icon {
+        height: 4rem;
+        width: 4rem;
+        margin-bottom: $s-spacing;
+      }
+    }
+  }
+}

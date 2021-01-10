@@ -1,0 +1,80 @@
+.contact-form {
+  & > * {
+    width: 100%;
+  }
+
+  &__container-one {
+    display: flex;
+
+    & input {
+      display: block;
+      flex: 1;
+      height: 6rem;
+      @include inputStyle;
+
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 100px $dark-navy-blue inset;
+        -webkit-text-fill-color: $light-purple;
+      }
+    }
+
+    & input {
+      &:last-child {
+        margin-left: $m-spacing;
+      }
+    }
+  }
+
+  &__container-two {
+    height: 25rem;
+
+    & > * {
+      font-family: inherit;
+      height: 100%;
+      padding-top: $s-spacing;
+      resize: none;
+      width: 100%;
+      @include inputStyle;
+    }
+  }
+
+  &__container-three {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container-two,
+  &__container-three {
+    margin-top: $m-spacing;
+  }
+
+  &__resume {
+    color: $light-green;
+  }
+
+  &__btn-submit {
+    background-color: $dark-blue;
+    border: 2px solid $light-green;
+    box-shadow: inset 0 0 0 0 $light-green;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: box-shadow ease-out 0.6s, color ease-out 0.6s;
+    height: 5rem;
+    width: 12rem;
+
+    &:active {
+      transform: translateY(0.2rem);
+    }
+
+    &:hover {
+      box-shadow: inset 400px 0 0 0 $light-green;
+      color: $light-grey;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -7,12 +7,14 @@
 @import './base/base';
 
 @import './pages/about.scss';
+@import './pages/contact.scss';
 @import './pages/technologies.scss';
-@import './components/technology-icons.scss';
 @import './pages/work.scss';
 
+@import './components/contact-form';
 @import './components/headings';
-@import './components//main';
+@import './components//main-container';
 @import './components/nav';
 @import './components/projects';
 @import './components/social-links';
+@import './components/technology-icons.scss';

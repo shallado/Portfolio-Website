@@ -30,29 +30,35 @@ function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmitMessage}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input type="text" value={name} id="name" onChange={handleNameChange} />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
+    <form onSubmit={handleSubmitMessage} className="contact-form">
+      <div className="contact-form__container-one">
+        <input
+          type="text"
+          value={name}
+          placeholder="Name"
+          id="name"
+          onChange={handleNameChange}
+        />
         <input
           type="text"
           value={email}
+          placeholder="Email"
           id="email"
           onChange={handleEmailChange}
         />
       </div>
-      <div>
-        <label htmlFor="message">Message:</label>
+      <div className="contact-form__container-two">
         <textarea
           value={message}
+          placeholder="Message"
           id="message"
           onChange={handleMessageChange}
         ></textarea>
       </div>
-      <button>Submit</button>
+      <div className="contact-form__container-three">
+        <p className="contact-form__resume">Resume</p>
+        <button className="contact-form__btn-submit">Submit</button>
+      </div>
     </form>
   );
 }
