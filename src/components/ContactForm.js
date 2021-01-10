@@ -1,65 +1,62 @@
-import { useState } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 
 function ContactForm() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
-  function handleNameChange(e) {
-    const name = e.target.value;
-
-    setName(name);
+  function handleSubmitMessage(values) {
+    console.log(values);
   }
 
-  function handleEmailChange(e) {
-    const email = e.target.value;
+  const inputValidation = Yup.object({
+    fullName: Yup.string().required('required'),
+    email: Yup.string().email('invalid email').required('required'),
+    message: Yup.string().required('required'),
+  });
 
-    setEmail(email);
-  }
-
-  function handleMessageChange(e) {
-    const message = e.target.value;
-
-    setMessage(message);
-  }
-
-  function handleSubmitMessage(e) {
-    e.preventDefault();
-
-    console.log(name, email, message);
-  }
+  const initialValues = {
+    fullName: '',
+    email: '',
+    message: '',
+  };
 
   return (
-    <form onSubmit={handleSubmitMessage} className="contact-form">
-      <div className="contact-form__container-one">
-        <input
-          type="text"
-          value={name}
-          placeholder="Name"
-          id="name"
-          onChange={handleNameChange}
-        />
-        <input
-          type="text"
-          value={email}
-          placeholder="Email"
-          id="email"
-          onChange={handleEmailChange}
-        />
-      </div>
-      <div className="contact-form__container-two">
-        <textarea
-          value={message}
-          placeholder="Message"
-          id="message"
-          onChange={handleMessageChange}
-        ></textarea>
-      </div>
-      <div className="contact-form__container-three">
-        <p className="contact-form__resume">Resume</p>
-        <button className="contact-form__btn-submit">Submit</button>
-      </div>
-    </form>
+    <Formik
+      initialValues={initialValues}
+      validationSchema={inputValidation}
+      onSubmit={handleSubmitMessage}
+    >
+      <Form className="contact-form">
+        <div className="contact-form__container-one">
+          <div>
+            <Field type="text" placeholder="Full Name" name="fullName" />
+            <ErrorMessage
+              component="div"
+              name="fullName"
+              className="contact-form__error-message"
+            />
+          </div>
+          <div>
+            <Field type="text" placeholder="Email" name="email" />
+            <ErrorMessage
+              component="div"
+              name="email"
+              className="contact-form__error-message"
+            />
+          </div>
+        </div>
+        <div className="contact-form__container-two">
+          <Field as="textarea" placeholder="Message" name="message" />
+          <ErrorMessage
+            component="div"
+            name="message"
+            className="contact-form__error-message"
+          />
+        </div>
+        <div className="contact-form__container-three">
+          <p className="contact-form__resume">Resume</p>
+          <button className="contact-form__btn-submit">Submit</button>
+        </div>
+      </Form>
+    </Formik>
   );
 }
 

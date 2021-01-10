@@ -6,10 +6,18 @@
   &__container-one {
     display: flex;
 
+    & > * {
+      flex: 1;
+
+      &:last-child {
+        margin-left: $m-spacing;
+      }
+    }
+
     & input {
       display: block;
-      flex: 1;
       height: 6rem;
+      width: 100%;
       @include inputStyle;
 
       &:-webkit-autofill {
@@ -17,18 +25,12 @@
         -webkit-text-fill-color: $light-purple;
       }
     }
-
-    & input {
-      &:last-child {
-        margin-left: $m-spacing;
-      }
-    }
   }
 
   &__container-two {
     height: 25rem;
 
-    & > * {
+    & textarea {
       font-family: inherit;
       height: 100%;
       padding-top: $s-spacing;
@@ -46,6 +48,11 @@
   &__container-two,
   &__container-three {
     margin-top: $m-spacing;
+  }
+
+  &__error-message {
+    position: absolute;
+    color: red;
   }
 
   &__resume {
