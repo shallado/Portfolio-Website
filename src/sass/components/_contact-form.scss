@@ -33,7 +33,6 @@
     & textarea {
       font-family: inherit;
       height: 100%;
-      padding-top: $s-spacing;
       resize: none;
       width: 100%;
       @include inputStyle;
