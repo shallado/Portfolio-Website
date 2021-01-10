@@ -1,9 +1,22 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import emailjs from 'emailjs-com';
+import emailjsConfig from '../config/emailjs';
 
 function ContactForm() {
-  function handleSubmitMessage(values) {
-    console.log(values);
+  function handleSubmitMessage(values, actions) {
+    const { serviceId, templateId, userId } = emailjsConfig;
+
+    emailjs
+      .send(serviceId, templateId, values, userId)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err.text);
+      });
+
+    actions.resetForm();
   }
 
   const inputValidation = Yup.object({
@@ -23,6 +36,7 @@ function ContactForm() {
       initialValues={initialValues}
       validationSchema={inputValidation}
       onSubmit={handleSubmitMessage}
+      resetForm
     >
       <Form className="contact-form">
         <div className="contact-form__container-one">
@@ -53,7 +67,9 @@ function ContactForm() {
         </div>
         <div className="contact-form__container-three">
           <p className="contact-form__resume">Resume</p>
-          <button className="contact-form__btn-submit">Submit</button>
+          <button type="submit" className="contact-form__btn-submit">
+            Submit
+          </button>
         </div>
       </Form>
     </Formik>
