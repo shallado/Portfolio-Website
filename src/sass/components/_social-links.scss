@@ -11,5 +11,9 @@
     fill: $light-grey;
     height: 2.5rem;
     width: 2.5rem;
+
+    &:hover {
+      fill: lighten($light-grey, 35%);
+    }
   }
 }
