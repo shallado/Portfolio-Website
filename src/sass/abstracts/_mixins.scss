@@ -12,3 +12,9 @@
   outline: none;
   border: none;
 }
+
+@mixin centerItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

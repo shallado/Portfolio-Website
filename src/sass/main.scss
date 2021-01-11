@@ -11,6 +11,7 @@
 @import './pages/technologies.scss';
 @import './pages/work.scss';
 
+@import './components/btn';
 @import './components/contact-form';
 @import './components/headings';
 @import './components//main-container';
@@ -18,3 +19,5 @@
 @import './components/projects';
 @import './components/social-links';
 @import './components/technology-icons.scss';
+
+@import './modals//email-status.scss';
