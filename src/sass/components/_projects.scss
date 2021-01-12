@@ -1,6 +1,11 @@
 .projects {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  & > * {
+    margin-bottom: $m-spacing;
+  }
 
   &__project-img-container {
     height: 15rem;
@@ -11,12 +16,62 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include setBreakPoints(900) {
+      height: 17rem;
+      width: 25rem;
+    }
+
+    @include setBreakPoints(800) {
+      height: 20rem;
+      width: 30rem;
+    }
+
+    @include setBreakPoints(550) {
+      height: 25rem;
+      width: 40rem;
+    }
+
+    @include setBreakPoints(425) {
+      height: 20rem;
+      width: 30rem;
+    }
+
+    @include setBreakPoints(350) {
+      height: 18rem;
+      width: 25rem;
+    }
   }
 
   &__project-img {
     box-shadow: 0.5rem 0.5rem 0.7rem $light-grey;
     height: 11rem;
     width: 18rem;
+
+    @include setBreakPoints(900) {
+      height: 13rem;
+      width: 23rem;
+    }
+
+    @include setBreakPoints(800) {
+      height: 16rem;
+      width: 28rem;
+    }
+
+    @include setBreakPoints(550) {
+      height: 21rem;
+      width: 38rem;
+    }
+
+    @include setBreakPoints(425) {
+      height: 16rem;
+      width: 28rem;
+    }
+
+    @include setBreakPoints(350) {
+      height: 14rem;
+      width: 23rem;
+    }
 
     &:hover {
       box-shadow: none;

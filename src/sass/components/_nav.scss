@@ -5,6 +5,7 @@
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   @include setBreakPoints(700) {
     justify-content: space-between;
@@ -38,10 +39,6 @@
       display: flex;
       justify-content: space-between;
     }
-  }
-
-  &__container-three {
-    margin-top: 26.5rem;
   }
 
   &--mobile-show {
