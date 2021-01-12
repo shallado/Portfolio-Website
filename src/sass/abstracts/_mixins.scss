@@ -1,7 +1,14 @@
 @mixin pageLayout {
   background-color: $dark-blue;
-  flex: 0 0 75%;
+  flex: 3;
   padding: $xl-spacing $m-spacing $m-spacing $m-spacing;
+
+  @include setBreakPoints(550) {
+    height: 100vh;
+    overflow: auto;
+    width: 100%;
+    padding: $xl-spacing $m-spacing $m-spacing $m-spacing;
+  }
 }
 
 @mixin inputStyle {
@@ -17,4 +24,42 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin setBreakPoints($breakpoint) {
+  @if $breakpoint == 850 {
+    @media only screen and (max-width: 53.1em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 800 {
+    @media only screen and (max-width: 50em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 700 {
+    @media only screen and (max-width: 43.8em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 600 {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 550 {
+    @media only screen and (max-width: 34.4em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 350 {
+    @media only screen and (max-width: 21.9em) {
+      @content;
+    }
+  }
 }

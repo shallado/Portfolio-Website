@@ -1,13 +1,60 @@
 .nav {
   background-color: $blue;
-  flex: 0 0 25%;
-  padding: 8rem 0 4rem 0;
+  flex: 1;
+  padding: $xl-spacing 0 $m-spacing 0;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
-  &__container {
+  @include setBreakPoints(700) {
+    justify-content: space-between;
+  }
+
+  @include setBreakPoints(550) {
+    clip-path: circle(3rem at right 6rem top 6rem);
+    display: initial;
+    font-size: 3rem;
+    height: 100vh;
+    overflow: auto;
+    padding: 0 0 $m-spacing 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: clip-path 0.375s;
+    width: 100%;
+    z-index: 1;
+  }
+
+  @include setBreakPoints(350) {
+    font-size: 2.5rem;
+  }
+
+  &__container-one {
+    display: none;
+
+    @include setBreakPoints(550) {
+      padding: $m-spacing $m-spacing 0 $m-spacing;
+
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__container-three {
+    margin-top: 26.5rem;
+  }
+
+  &--mobile-show {
+    clip-path: circle(100%);
+  }
+
+  &__icon {
+    fill: $light-green;
+
+    @include setBreakPoints(550) {
+      height: 4rem;
+      width: 4rem;
+    }
   }
 
   &__profile-img-container {
@@ -16,6 +63,21 @@
     height: 12.5rem;
     margin-left: 5rem;
     width: 12.5rem;
+
+    @include setBreakPoints(850) {
+      display: block;
+      margin: 0 auto;
+    }
+
+    @include setBreakPoints(550) {
+      height: 16rem;
+      width: 16rem;
+    }
+
+    @include setBreakPoints(350) {
+      height: 14rem;
+      width: 14rem;
+    }
 
     img {
       width: 100%;
@@ -29,13 +91,22 @@
 
   &__link-container {
     padding: 1rem 0;
+
+    @include setBreakPoints(550) {
+      text-align: center;
+    }
   }
 
   &__link {
     border-left: 0.8rem solid rgba($light-green, 0);
     color: #fff;
-    padding: 1rem 0 1rem $m-spacing;
+    padding: 1rem $m-spacing 1rem $m-spacing;
     text-decoration: none;
+
+    @include setBreakPoints(550) {
+      display: block;
+      padding: 1rem 0 0 0;
+    }
   }
 
   &__link-active {

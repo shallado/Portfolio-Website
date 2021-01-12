@@ -1,6 +1,11 @@
 .social-links {
   margin-left: 5rem;
 
+  @include setBreakPoints(550) {
+    margin: $l-spacing 0 0 0;
+    text-align: center;
+  }
+
   & a {
     &:not(:first-child) {
       margin-left: $s-spacing;
@@ -11,6 +16,16 @@
     fill: $light-grey;
     height: 2.5rem;
     width: 2.5rem;
+
+    @include setBreakPoints(550) {
+      height: 5rem;
+      width: 5rem;
+    }
+
+    @include setBreakPoints(350) {
+      height: 4rem;
+      width: 4rem;
+    }
 
     &:hover {
       fill: lighten($light-grey, 35%);
