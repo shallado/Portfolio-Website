@@ -1,8 +1,5 @@
 .social-links {
-  margin-left: 5rem;
-
   @include setBreakPoints(550) {
-    margin: $l-spacing 0 0 0;
     text-align: center;
   }
 

@@ -5,12 +5,21 @@
 
   &__container-one {
     display: flex;
+    flex-wrap: wrap;
 
     & > * {
       flex: 1;
 
+      @include setBreakPoints(800) {
+        flex: 0 0 100%;
+      }
+
       &:last-child {
         margin-left: $m-spacing;
+
+        @include setBreakPoints(800) {
+          margin: $m-spacing 0 0 0;
+        }
       }
     }
 

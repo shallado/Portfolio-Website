@@ -110,4 +110,12 @@
     border-left: 0.8rem solid rgba($light-green, 1);
     color: $light-green;
   }
+
+  &__container-three {
+    margin-left: 5rem;
+
+    @include setBreakPoints(550) {
+      margin: $s-spacing 0 0 0;
+    }
+  }
 }

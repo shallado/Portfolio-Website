@@ -5,6 +5,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include setBreakPoints(700) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__container {
