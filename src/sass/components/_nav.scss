@@ -7,13 +7,8 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @include setBreakPoints(700) {
-    justify-content: space-between;
-  }
-
   @include setBreakPoints(550) {
     clip-path: circle(3rem at right 6rem top 6rem);
-    display: initial;
     font-size: 3rem;
     height: 100vh;
     overflow: auto;

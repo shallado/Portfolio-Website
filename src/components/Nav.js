@@ -13,7 +13,9 @@ function Nav() {
   }
 
   function handleCloseNavMenu() {
-    setIsOpen(false);
+    if (navIsOpen) {
+      setIsOpen(false);
+    }
   }
 
   const navClassName = navIsOpen ? 'nav nav--mobile-show' : 'nav';
@@ -36,6 +38,7 @@ function Nav() {
                 exact
                 className="nav__link"
                 activeClassName="nav__link-active"
+                onClick={handleCloseNavMenu}
               >
                 About
               </NavLink>
@@ -45,6 +48,7 @@ function Nav() {
                 to="/work"
                 className="nav__link"
                 activeClassName="nav__link-active"
+                onClick={handleCloseNavMenu}
               >
                 Work
               </NavLink>
@@ -54,6 +58,7 @@ function Nav() {
                 to="/technologies"
                 className="nav__link"
                 activeClassName="nav__link-active"
+                onClick={handleCloseNavMenu}
               >
                 Technologies
               </NavLink>
@@ -63,6 +68,7 @@ function Nav() {
                 to="/contact"
                 className="nav__link"
                 activeClassName="nav__link-active"
+                onClick={handleCloseNavMenu}
               >
                 Contact
               </NavLink>
