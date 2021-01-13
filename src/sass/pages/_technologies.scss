@@ -1,6 +1,5 @@
 .technologies {
   @include pageLayout;
-  overflow: auto;
 
   &__main-container {
     display: flex;

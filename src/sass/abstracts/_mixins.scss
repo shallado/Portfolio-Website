@@ -2,10 +2,10 @@
   background-color: $dark-blue;
   flex: 3;
   padding: $xl-spacing $m-spacing $m-spacing $m-spacing;
+  overflow-y: auto;
 
   @include setBreakPoints(550) {
     height: 100vh;
-    overflow: auto;
     width: 100%;
     padding: $xl-spacing $m-spacing $m-spacing $m-spacing;
   }
