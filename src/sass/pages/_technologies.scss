@@ -1,19 +1,33 @@
 .technologies {
   @include pageLayout;
-  overflow-y: scroll;
+  overflow: auto;
 
   &__main-container {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__container-one,
   &__container-two {
     display: flex;
     flex-direction: column;
+
+    @include setBreakPoints(850) {
+      flex: 0 0 100%;
+      align-items: center;
+    }
   }
 
   &__container-two {
     margin-left: 16rem;
+
+    @include setBreakPoints(900) {
+      margin-left: 10rem;
+    }
+
+    @include setBreakPoints(850) {
+      margin: 0;
+    }
   }
 
   &__icon-container {
@@ -22,16 +36,34 @@
     display: flex;
     justify-content: space-between;
 
+    @include setBreakPoints(850) {
+      width: 70%;
+    }
+
+    @include setBreakPoints(700) {
+      width: 100%;
+    }
+
+    @include setBreakPoints(550) {
+      width: 90%;
+    }
+
+    @include setBreakPoints(425) {
+      width: 100%;
+    }
+
     & div {
       border-radius: 10rem;
       height: 12rem;
-      margin-left: $l-spacing;
       position: relative;
       width: 12rem;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include centerItems;
+
+      @include setBreakPoints(350) {
+        height: 10rem;
+        width: 10rem;
+      }
 
       &::after {
         border-radius: 10rem;
