@@ -55,16 +55,6 @@ function Nav() {
             </li>
             <li className="nav__link-container">
               <NavLink
-                to="/technologies"
-                className="nav__link"
-                activeClassName="nav__link-active"
-                onClick={handleCloseNavMenu}
-              >
-                Technologies
-              </NavLink>
-            </li>
-            <li className="nav__link-container">
-              <NavLink
                 to="/contact"
                 className="nav__link"
                 activeClassName="nav__link-active"
