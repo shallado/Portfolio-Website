@@ -15,8 +15,13 @@
   &__exit-icon-container {
     text-align: right;
 
-    &:hover {
-      cursor: pointer;
+    & div {
+      height: 4rem;
+      display: inline-block;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 

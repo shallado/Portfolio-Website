@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Modal from 'react-modal';
 import IconExit from '../svg/IconExit';
 import IconRightArrow from '../svg/IconRightArrow';
@@ -6,17 +5,17 @@ import IconRightArrowBox from '../svg/IconRightArrowBox';
 
 Modal.setAppElement('#root');
 
-function ProjectInfo() {
-  const [modelIsOpen] = useState(true);
-
+function ProjectInfo({ modalIsOpen, closeModal }) {
   return (
     <Modal
-      isOpen={modelIsOpen}
+      isOpen={modalIsOpen}
       overlayClassName="modal-overlay"
       className="project-info"
     >
       <div className="project-info__exit-icon-container">
-        <IconExit />
+        <div onClick={closeModal}>
+          <IconExit />
+        </div>
       </div>
       <div className="project-info__heading-container">
         <h3 className="heading-three heading-three--project-info">VGL App</h3>

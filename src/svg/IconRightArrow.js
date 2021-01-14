@@ -8,8 +8,8 @@ function IconRightArrow() {
     >
       <title id="right-arrow">Right Arrow Icon</title>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M63.9 61.44L0 122.88V0l63.9 61.44z"
       />
     </svg>
