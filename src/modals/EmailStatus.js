@@ -10,7 +10,7 @@ function EmailStatus({ emailStatus, resetEmailStatus }) {
   return (
     <Modal
       isOpen={!!emailStatus}
-      overlayClassName="email-status__overlay"
+      overlayClassName="modal-overlay"
       className="email-status"
     >
       <div className="email-status__message-container">
