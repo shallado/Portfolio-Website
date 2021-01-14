@@ -4,7 +4,7 @@ function IconHamburgerMenu({ handleOpenNavMenu }) {
       aria-labelledby="hamburger-menu"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 122.88 95.95"
-      className="nav__icon nav__icon--menu"
+      className="hamgburger-menu-icon"
       onClick={handleOpenNavMenu}
     >
       <title id="hamburger-menu">Hamburger Menu Icon</title>

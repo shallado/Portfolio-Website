@@ -40,15 +40,6 @@
     clip-path: circle(100%);
   }
 
-  &__icon {
-    fill: $light-green;
-
-    @include setBreakPoints(550) {
-      height: 4rem;
-      width: 4rem;
-    }
-  }
-
   &__profile-img-container {
     border-radius: 10rem;
     display: inline-block;

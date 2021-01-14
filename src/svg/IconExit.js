@@ -4,7 +4,7 @@ function IconExit({ handleCloseNavMenu }) {
       aria-labelledby="exit"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 122.88 122"
-      className="nav__icon nav__icon--exit"
+      className="exit-icon"
       onClick={handleCloseNavMenu}
     >
       <title id="exit">Exit Icon</title>
