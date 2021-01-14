@@ -12,17 +12,30 @@
   }
 }
 
+.heading-two,
+.heading-three,
+.heading-four {
+  color: #fff;
+  font-weight: 100;
+}
+
 .heading-two {
   border-bottom: 2px solid $light-green;
-  color: #fff;
   display: inline-block;
-  font-weight: 100;
-  font-size: 3rem;
+  font-size: 5rem;
   margin-bottom: $m-spacing;
 }
 
 .heading-three {
-  font-weight: 100;
-  color: #fff;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
+  font-size: 3rem;
+
+  &--project-info {
+    border-bottom: 2px solid $light-green;
+    display: inline-block;
+  }
+}
+
+.heading-four {
+  font-size: 2.2rem;
 }
