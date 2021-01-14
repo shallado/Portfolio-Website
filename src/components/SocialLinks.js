@@ -8,17 +8,21 @@ function SocialLinks() {
       <a
         href="https://twitter.com/SHallado1012"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         <IconTwitter />
       </a>
-      <a href="https://github.com/shallado" target="_blank" rel="noreferrer">
+      <a
+        href="https://github.com/shallado"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <IconGitHub />
       </a>
       <a
         href="https://www.linkedin.com/in/sandrohallado/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         <IconLinkedIn />
       </a>
