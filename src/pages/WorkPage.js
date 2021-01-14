@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ProjectInfo from '../modals/ProjectInfo';
+import IconRightArrowRound from '../svg/IconRightArrowRound';
 import project from '../img/project.png';
 
 function WorkPage() {
@@ -23,6 +24,9 @@ function WorkPage() {
               onClick={openModal}
               className="projects__project-img-container"
             >
+              <div className="projects__project-img-overlay">
+                <IconRightArrowRound />
+              </div>
               <img
                 className="projects__project-img"
                 src={project}
@@ -36,6 +40,9 @@ function WorkPage() {
               onClick={openModal}
               className="projects__project-img-container"
             >
+              <div className="projects__project-img-overlay">
+                <IconRightArrowRound />
+              </div>
               <img
                 className="projects__project-img"
                 src={project}
@@ -49,6 +56,9 @@ function WorkPage() {
               onClick={openModal}
               className="projects__project-img-container"
             >
+              <div className="projects__project-img-overlay">
+                <IconRightArrowRound />
+              </div>
               <img
                 className="projects__project-img"
                 src={project}

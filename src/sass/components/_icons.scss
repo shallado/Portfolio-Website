@@ -6,11 +6,17 @@
 }
 
 .right-arrow-icon,
-.right-arrow-box-icon {
+.right-arrow-box-icon,
+.right-arrow-round-icon {
   fill: $light-green;
   height: 2rem;
   margin-right: 1rem;
   width: 2rem;
+}
+
+.right-arrow-round-icon {
+  height: 4rem;
+  width: 4rem;
 }
 
 .right-arrow-box-icon {
