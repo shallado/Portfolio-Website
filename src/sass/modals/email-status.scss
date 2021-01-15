@@ -1,15 +1,19 @@
 .email-status {
+  background-color: $navy-blue;
+  color: #fff;
+  height: 25rem;
+  width: 40rem;
   @include centerItems;
-  height: 100%;
+  flex-direction: column;
+  z-index: 1;
 
-  &__message-container {
-    background-color: $navy-blue;
-    color: #fff;
-    height: 25rem;
-    width: 25%;
-    @include centerItems;
-    flex-direction: column;
-    z-index: 1;
+  @include setBreakPoints(425) {
+    height: 20rem;
+    width: 30rem;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &__message {
