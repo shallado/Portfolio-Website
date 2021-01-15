@@ -36,6 +36,11 @@
     }
   }
 
+  &__field-container,
+  &__container-two {
+    position: relative;
+  }
+
   &__container-two {
     height: 25rem;
 
@@ -68,6 +73,10 @@
   &__error-message {
     position: absolute;
     color: red;
+
+    &--text-area {
+      top: 25rem;
+    }
   }
 
   &__resume {

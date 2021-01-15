@@ -57,7 +57,7 @@ function ContactForm() {
       >
         <Form className="contact-form">
           <div className="contact-form__container-one">
-            <div>
+            <div className="contact-form__field-container">
               <Field type="text" placeholder="Full Name" name="fullName" />
               <ErrorMessage
                 component="div"
@@ -65,7 +65,7 @@ function ContactForm() {
                 className="contact-form__error-message"
               />
             </div>
-            <div>
+            <div className="contact-form__field-container">
               <Field type="text" placeholder="Email" name="email" />
               <ErrorMessage
                 component="div"
@@ -79,7 +79,7 @@ function ContactForm() {
             <ErrorMessage
               component="div"
               name="message"
-              className="contact-form__error-message"
+              className="contact-form__error-message contact-form__error-message--text-area"
             />
           </div>
           <div className="contact-form__container-three">
