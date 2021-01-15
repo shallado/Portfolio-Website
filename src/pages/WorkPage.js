@@ -5,12 +5,15 @@ import project from '../img/project.png';
 
 function WorkPage() {
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [projectNum, setProjectNum] = useState(0);
 
-  function openModal() {
+  function openModal(projectNum) {
+    setProjectNum(projectNum);
     setIsOpen(true);
   }
 
   function closeModal() {
+    setProjectNum(0);
     setIsOpen(false);
   }
 
@@ -21,7 +24,7 @@ function WorkPage() {
         <div className="projects">
           <div>
             <div
-              onClick={openModal}
+              onClick={() => openModal(1)}
               className="projects__project-img-container"
             >
               <div className="projects__project-img-overlay">
@@ -37,7 +40,7 @@ function WorkPage() {
           </div>
           <div>
             <div
-              onClick={openModal}
+              onClick={() => openModal(2)}
               className="projects__project-img-container"
             >
               <div className="projects__project-img-overlay">
@@ -53,7 +56,7 @@ function WorkPage() {
           </div>
           <div>
             <div
-              onClick={openModal}
+              onClick={() => openModal(3)}
               className="projects__project-img-container"
             >
               <div className="projects__project-img-overlay">
@@ -69,7 +72,11 @@ function WorkPage() {
           </div>
         </div>
       </div>
-      <ProjectInfo modalIsOpen={modalIsOpen} closeModal={closeModal} />
+      <ProjectInfo
+        projectNum={projectNum}
+        modalIsOpen={modalIsOpen}
+        closeModal={closeModal}
+      />
     </>
   );
 }
