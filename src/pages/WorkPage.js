@@ -36,7 +36,7 @@ function WorkPage() {
                 alt="project 1"
               />
             </div>
-            <h3 className="heading-three">Project 1</h3>
+            <h3 className="heading-three">VGL App</h3>
           </div>
           <div>
             <div

@@ -53,6 +53,10 @@
     margin-top: 0.5rem;
   }
 
+  &__description {
+    margin-left: 1rem;
+  }
+
   &__features,
   &__technologies {
     list-style: none;
@@ -60,8 +64,16 @@
 
   &__features {
     & li {
-      display: flex;
-      align-items: center;
+      margin-left: $m-spacing;
+      text-indent: -3rem;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      & span {
+        vertical-align: middle;
+      }
     }
   }
 

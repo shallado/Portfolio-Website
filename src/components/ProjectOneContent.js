@@ -11,10 +11,8 @@ function ProjectOneContent() {
         <div className="project-info__description-container">
           <h4 className="heading-four">Description:</h4>
           <p className="project-info__description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit
-            dolores labore explicabo, quisquam, a vero maxime modi similique
-            laboriosam temporibus sit amet eos dolore ex eum, expedita sapiente
-            eius perferendis?
+            Application to get information about new and old video games which
+            includes video game trailers and user reviews
           </p>
         </div>
         <div className="project-info__features-container">
@@ -22,19 +20,32 @@ function ProjectOneContent() {
           <ul className="project-info__features">
             <li>
               <IconRightArrow />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <span>User authentication</span>
             </li>
             <li>
               <IconRightArrow />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <span>
+                User has the ability to create and update video game reviews
+              </span>
             </li>
             <li>
               <IconRightArrow />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <span>User can search specific video games</span>
             </li>
             <li>
               <IconRightArrow />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <span>User can update or delete their profile</span>
+            </li>
+            <li>
+              <IconRightArrow />
+              <span>User can upload a profile photo</span>
+            </li>
+            <li>
+              <IconRightArrow />
+              <span>
+                User can get info of physical stores to purchase a video game
+                depending on their location
+              </span>
             </li>
           </ul>
         </div>
@@ -42,8 +53,11 @@ function ProjectOneContent() {
           <ul className="project-info__technologies">
             <li>Javascript</li>
             <li>React</li>
+            <li>React-Router</li>
+            <li>Redux</li>
             <li>Express</li>
             <li>MongoDB</li>
+            <li>Sass</li>
           </ul>
         </div>
         <div className="project-info__examples-container">
