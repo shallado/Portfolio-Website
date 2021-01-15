@@ -2,12 +2,22 @@
   background-color: $navy-blue;
   width: 100%;
 
+  @media only screen and (min-height: 62.5em) {
+    height: 100vh;
+    @include centerItems;
+  }
+
   &__container {
     min-height: 100vh;
     max-width: $grid-width;
     margin: 0 auto;
 
     display: flex;
+
+    @media only screen and (min-height: 62.5em) {
+      min-height: 97rem;
+      flex: 1 0 0;
+    }
 
     @include setBreakPoints(550) {
       position: relative;
