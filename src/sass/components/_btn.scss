@@ -17,10 +17,12 @@
     transform: translateY(0.2rem);
   }
 
-  &:hover {
-    box-shadow: inset 400px 0 0 0 $light-green;
-    color: $light-grey;
-    cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: inset 400px 0 0 0 $light-green;
+      color: $light-grey;
+      cursor: pointer;
+    }
   }
 
   &:focus {

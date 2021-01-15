@@ -24,8 +24,10 @@
       width: 4rem;
     }
 
-    &:hover {
-      fill: lighten($light-grey, 35%);
+    @media (hover: hover) {
+      &:hover {
+        fill: lighten($light-grey, 35%);
+      }
     }
   }
 }

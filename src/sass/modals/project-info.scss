@@ -112,10 +112,12 @@
     align-items: center;
     fill: $light-green;
 
-    &:hover {
-      color: darken($light-green, 35%);
-      cursor: pointer;
-      fill: darken($light-green, 35%);
+    @media (hover: hover) {
+      &:hover {
+        color: darken($light-green, 35%);
+        cursor: pointer;
+        fill: darken($light-green, 35%);
+      }
     }
 
     &:first-child {
