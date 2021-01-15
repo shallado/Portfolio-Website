@@ -7,7 +7,7 @@ import EmailStatus from '../modals/EmailStatus';
 import IconResume from '../svg/IconResume';
 
 function ContactForm() {
-  const [emailStatus, setEmailStatus] = useState('hello world');
+  const [emailStatus, setEmailStatus] = useState('');
 
   function handleSubmitMessage(values, actions) {
     const { serviceId, templateId, userId } = emailjsConfig;
