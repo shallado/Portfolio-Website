@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import emailjsConfig from '../config/emailjs';
 import EmailStatus from '../modals/EmailStatus';
+import IconResume from '../svg/IconResume';
 
 function ContactForm() {
   const [emailStatus, setEmailStatus] = useState('');
@@ -82,7 +83,10 @@ function ContactForm() {
             />
           </div>
           <div className="contact-form__container-three">
-            <p className="contact-form__resume">Resume</p>
+            <div>
+              <IconResume />
+              <p className="contact-form__resume">Resume</p>
+            </div>
             <button type="submit" className="btn">
               Submit
             </button>

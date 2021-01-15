@@ -7,11 +7,17 @@
 
 .right-arrow-icon,
 .right-arrow-box-icon,
-.right-arrow-round-icon {
+.right-arrow-round-icon,
+.resume-icon {
   fill: $light-green;
   height: 2rem;
   margin-right: 1rem;
   width: 2rem;
+}
+
+.resume-icon {
+  height: 5rem;
+  width: 5rem;
 }
 
 .right-arrow-round-icon {
